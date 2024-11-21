@@ -2,3 +2,5 @@ node_modules
 .venv
 data
 **/__pycache__/**
+.env
+.ropeproject/
