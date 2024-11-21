@@ -15,6 +15,7 @@ RUN npm run build
 FROM node:18-alpine as frontend-serve
 WORKDIR /app
 COPY --from=frontend-build /app/build ./build
+COPY --from=frontend-build /app/build /usr/share/nginx/html
 COPY package*.json ./
 COPY .env ./
 RUN npm install -g serve
